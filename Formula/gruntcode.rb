@@ -10,26 +10,25 @@ class Gruntcode < Formula
   desc "grunt-it soft-fork of opencode with hivemind-native autonomous-coordinator patches"
   homepage "https://github.com/grunt-it/gruntcode"
   license "MIT"
-  version "1.15.10-grunt.2"
+  version "1.15.10-grunt.3"
 
   on_macos do
     on_arm do
-      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.2/gruntcode-darwin-arm64.tar.gz"
-      sha256 "06ad549b780640e96531bc50599546823801185cb52f9ee9cadec77dd56ca2e9"
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.3/gruntcode-darwin-arm64.tar.gz"
+      sha256 "fa10f2378ab9b229b4812bee7c1e7bb4c0b5dd4cd26daf67bea6e121b510e705"
     end
-    # darwin-x64 binary still queued in CI for this release. Will land in
-    # v1.15.10-grunt.3 (or a tap follow-up commit once the asset uploads
-    # to v1.15.10-grunt.2 after the macos-13 runner becomes available).
+    # darwin-x64 still queued in CI (macos-13 runner congestion). Will land in
+    # v1.15.10-grunt.4 (or a tap follow-up commit once asset uploads).
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.2/gruntcode-linux-arm64.tar.gz"
-      sha256 "686fa2e0e337606c4642eddf803be338495aadf279e90cfe7e99938bd948ac69"
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.3/gruntcode-linux-arm64.tar.gz"
+      sha256 "1989f70f6641ffceb19784c3b33d41a717946aa0050aa9ee297d34abc132a73c"
     end
     on_intel do
-      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.2/gruntcode-linux-x64.tar.gz"
-      sha256 "758e41045d2a394b9cda4bb4444f8d552a8936b6fbc4472ec4f9193a5038f1bd"
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.3/gruntcode-linux-x64.tar.gz"
+      sha256 "e88e55f77680a77089622d4151451b9be273f3c2470c5320d252dcf111af9bea"
     end
   end
 
