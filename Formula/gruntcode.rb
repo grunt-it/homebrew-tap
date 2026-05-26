@@ -3,33 +3,43 @@
 
 # gruntcode — grunt-it soft-fork of opencode with hivemind-native patches
 #
-# DRAFT STATUS: this formula is a placeholder. The gruntcode binary is not yet
-# released — see hivemind #222 Phase 2 for patch series progress. Once we cut
-# our first tagged release (e.g. v1.15.10-grunt.1), this formula will be
-# updated with real `url`, `sha256`, and `version` values and the install path
-# will start working.
-#
-# Tracking issue: https://github.com/grunt-it/hivemind-mcp (issue #222)
+# Releases: https://github.com/grunt-it/gruntcode/releases
+# Source:   https://github.com/grunt-it/gruntcode
+# Tracking: hivemind #222 for patch series + roadmap
 class Gruntcode < Formula
   desc "grunt-it soft-fork of opencode with hivemind-native autonomous-coordinator patches"
   homepage "https://github.com/grunt-it/gruntcode"
   license "MIT"
+  version "1.15.10-grunt.1"
 
-  # Placeholder values — real release artifacts not built yet.
-  version "0.0.0-draft"
-  url "https://github.com/grunt-it/gruntcode/archive/refs/heads/dev.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  on_macos do
+    on_arm do
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.1/gruntcode-darwin-arm64.tar.gz"
+      sha256 "ce3a232e39a691dd51db2be435ea59be4370501c606da49fb256b29037c38070"
+    end
+    # darwin-x64 binary deferred: macos-13 CI runner queue was bottlenecked when
+    # v1.15.10-grunt.1 was cut. Will land in v1.15.10-grunt.2 (or a tap-only
+    # follow-up commit if the asset gets uploaded to the same release after
+    # this formula lands).
+    # on_intel do
+    #   url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.1/gruntcode-darwin-x64.tar.gz"
+    #   sha256 "..."
+    # end
+  end
 
-  # Same runtime deps as opencode upstream
-  depends_on "bun"
+  on_linux do
+    on_arm do
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.1/gruntcode-linux-arm64.tar.gz"
+      sha256 "a1458534ea645f3ff02cc05762ea8680c4cde2da367e945ad8f6c8fefc959f61"
+    end
+    on_intel do
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.1/gruntcode-linux-x64.tar.gz"
+      sha256 "e6e5737225daa0f3baaf9a46441b9714cc2ce469c330a4046d7c48b011e23c88"
+    end
+  end
 
   def install
-    # Placeholder build path. Real flow once we have a release pipeline:
-    # 1. system "bun", "install", "--production"
-    # 2. system "bun", "build", "packages/opencode/src/index.ts",
-    #          "--compile", "--outfile", "gruntcode"
-    # 3. bin.install "gruntcode"
-    odie "gruntcode formula is a draft placeholder — see hivemind #222 Phase 2 for release status"
+    bin.install "gruntcode"
   end
 
   test do
