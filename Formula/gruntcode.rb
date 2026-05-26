@@ -10,31 +10,26 @@ class Gruntcode < Formula
   desc "grunt-it soft-fork of opencode with hivemind-native autonomous-coordinator patches"
   homepage "https://github.com/grunt-it/gruntcode"
   license "MIT"
-  version "1.15.10-grunt.1"
+  version "1.15.10-grunt.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.1/gruntcode-darwin-arm64.tar.gz"
-      sha256 "ce3a232e39a691dd51db2be435ea59be4370501c606da49fb256b29037c38070"
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.2/gruntcode-darwin-arm64.tar.gz"
+      sha256 "06ad549b780640e96531bc50599546823801185cb52f9ee9cadec77dd56ca2e9"
     end
-    # darwin-x64 binary deferred: macos-13 CI runner queue was bottlenecked when
-    # v1.15.10-grunt.1 was cut. Will land in v1.15.10-grunt.2 (or a tap-only
-    # follow-up commit if the asset gets uploaded to the same release after
-    # this formula lands).
-    # on_intel do
-    #   url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.1/gruntcode-darwin-x64.tar.gz"
-    #   sha256 "..."
-    # end
+    # darwin-x64 binary still queued in CI for this release. Will land in
+    # v1.15.10-grunt.3 (or a tap follow-up commit once the asset uploads
+    # to v1.15.10-grunt.2 after the macos-13 runner becomes available).
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.1/gruntcode-linux-arm64.tar.gz"
-      sha256 "a1458534ea645f3ff02cc05762ea8680c4cde2da367e945ad8f6c8fefc959f61"
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.2/gruntcode-linux-arm64.tar.gz"
+      sha256 "686fa2e0e337606c4642eddf803be338495aadf279e90cfe7e99938bd948ac69"
     end
     on_intel do
-      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.1/gruntcode-linux-x64.tar.gz"
-      sha256 "e6e5737225daa0f3baaf9a46441b9714cc2ce469c330a4046d7c48b011e23c88"
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.2/gruntcode-linux-x64.tar.gz"
+      sha256 "758e41045d2a394b9cda4bb4444f8d552a8936b6fbc4472ec4f9193a5038f1bd"
     end
   end
 
