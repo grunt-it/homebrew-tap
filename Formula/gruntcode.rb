@@ -6,23 +6,23 @@ class Gruntcode < Formula
   desc "grunt-it soft-fork of opencode with hivemind-native autonomous-coordinator patches"
   homepage "https://github.com/grunt-it/gruntcode"
   license "MIT"
-  version "1.15.10-grunt.8"
+  version "1.15.10-grunt.10"
 
   on_macos do
     on_arm do
-      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.8/gruntcode-darwin-arm64.tar.gz"
-      sha256 "e61a87bdc389520ecd43355447f80e270198eabaa86c0c35868a5be322d8fe1c"
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.10/gruntcode-darwin-arm64.tar.gz"
+      sha256 "f0e0f484f804297a8b7f7b8ad5ae516f362fd5e9b35d48df0d531acdece1a131"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.8/gruntcode-linux-arm64.tar.gz"
-      sha256 "78d54764f9f66ce432388b1bf056ff3e7d4d1d5392dd97dfcdd3e5a043f2ae00"
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.10/gruntcode-linux-arm64.tar.gz"
+      sha256 "6ede975739bba8501063660ad146292feb27fa542f97787df79bd2d6783a5ae0"
     end
     on_intel do
-      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.8/gruntcode-linux-x64.tar.gz"
-      sha256 "5e6f9269b19ce67ec02a4ba4cd52f36afae1682eb7dd1f7c92a5cf46780f5cad"
+      url "https://github.com/grunt-it/gruntcode/releases/download/v1.15.10-grunt.10/gruntcode-linux-x64.tar.gz"
+      sha256 "8c9aa1214f8f5ea5f711376f2db6eb715c799792fa7335a18b700c6f5f3c1f09"
     end
   end
 
